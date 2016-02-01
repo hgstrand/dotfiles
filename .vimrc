@@ -1,0 +1,70 @@
+
+"Make Vim more useful, uses Vim settings rather than Vi settings. Must be first
+set nocompatible
+
+" Line numbers
+set nu
+
+" Use OS clipboard
+set clipboard=unnamed
+
+" Allow backspace in insert mode
+set backspace=indent,eol,start
+
+" Reload files changed outside vim
+set autoread
+
+" This makes vim act like all other editors, buffers can
+" exist in the background without being in a window.
+set hidden
+
+" Enable syntax highlighting
+syntax enable
+
+filetype indent plugin on
+
+" Centralize backups, swapfiles and undo history
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+if exists("&undodir")
+	set undodir=~/.vim/undo
+endif
+
+" Highlight searches
+set hlsearch
+
+" Ignore case of searches if no upper case in search, * search stays normal
+set ignorecase
+set smartcase
+
+" Highlight dynamically as pattern is typed
+set incsearch
+
+" Start scrolling three lines before the horizontal window border
+set scrolloff=3
+
+" Setting tab properties
+set tabstop=4
+set expandtab
+set softtabstop=4
+set shiftwidth=4
+filetype indent on
+
+" Options in command line tab-completion
+set wildmenu
+
+" Setting Color theme
+set background=dark
+colorscheme solarized
+
+" Setting status line (with air-line)
+set laststatus=2
+
+" ALIASES
+" converts lowercase word to uppercase with ctrl-x c
+inoremap <C-x>c <esc>bgUWea
+
+" Clear search highlighting with space key
+nnoremap <Space> :noh<cr>
+
+
