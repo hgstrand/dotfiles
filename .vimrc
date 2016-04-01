@@ -2,8 +2,19 @@
 "Make Vim more useful, uses Vim settings rather than Vi settings. Must be first
 set nocompatible
 
-" Line numbers
+" Set relative number with line number on focus line
+setl rnu
 set nu
+
+" Function for switching line numbering optins, toggle witn ctrl-n
+nn <C-n> :call ToggleNumber()<CR>
+fun! ToggleNumber() "{{{
+	if exists('+relativenumber')
+		:exec &nu==&rnu? "setl nu!" : "setl rnu!"
+	else
+		setl nu! 
+	endif
+endf "}}} Switch between absolute and relative numbering
 
 " Use OS clipboard
 set clipboard=unnamed
@@ -67,4 +78,9 @@ inoremap <C-x>c <esc>bgUWea
 " Clear search highlighting with space key
 nnoremap <Space> :noh<cr>
 
+" Removes scroolbar on gui Vim
+set go-=r
 
+" Set font in gui Vim
+set guifont=Monaco:h12
+"
