@@ -84,3 +84,6 @@ set go-=r
 " Set font in gui Vim
 set guifont=Monaco:h12
 "
+
+" Set leader key
+let mapleader=" "
