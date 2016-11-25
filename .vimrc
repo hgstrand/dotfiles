@@ -87,3 +87,6 @@ set guifont=Monaco:h12
 
 " Set leader key
 let mapleader=" "
+
+" Save and quit with leader + d
+" map <Leader>d :wq<cr>
