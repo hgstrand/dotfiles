@@ -89,4 +89,4 @@ set guifont=Monaco:h12
 let mapleader=" "
 
 " Save and quit with leader + d
-" map <Leader>d :wq<cr>
+map <Leader>d :wq<cr>
