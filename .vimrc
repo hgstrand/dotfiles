@@ -1,4 +1,3 @@
-
 "Make Vim more useful, uses Vim settings rather than Vi settings. Must be first
 set nocompatible
 
@@ -90,3 +89,6 @@ let mapleader=" "
 
 " Save and quit with leader + d
 map <Leader>d :wq<cr>
+
+" Save with leader + s
+map <Leader>s :w<cr>
