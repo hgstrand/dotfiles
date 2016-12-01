@@ -1,6 +1,6 @@
 
 ### Aliases goes here ###
-alias mar='ssh mar'
+alias hera='ssh hera'
 alias stue='ssh stue'
 alias bc='brew cask'
 alias bcs='brew cask search'
