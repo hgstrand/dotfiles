@@ -60,6 +60,9 @@ set softtabstop=4
 set shiftwidth=4
 filetype indent on
 
+" set tab properties for html files
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
+
 " Options in command line tab-completion
 set wildmenu
 
