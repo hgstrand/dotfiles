@@ -5,7 +5,7 @@ set nocompatible
 setl rnu
 set nu
 
-" Function for switching line numbering optins, toggle witn ctrl-n
+" Function for switching line numbering optins, toggle with ctrl-n
 nn <C-n> :call ToggleNumber()<CR>
 fun! ToggleNumber() "{{{
 	if exists('+relativenumber')
