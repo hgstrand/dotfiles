@@ -60,8 +60,12 @@ set softtabstop=4
 set shiftwidth=4
 filetype indent on
 
-" set tab properties for html files
+" set tab properties for html and js files
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+
+" javascript plugin
+let g:javascript_plugin_jsdoc = 1
 
 " Options in command line tab-completion
 set wildmenu
