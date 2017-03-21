@@ -70,6 +70,10 @@ let g:javascript_plugin_jsdoc = 1
 " Options in command line tab-completion
 set wildmenu
 
+" move among buffers with CTRL
+map <C-J> :bnext<CR>
+map <C-K> :bprev<CR>
+
 " Setting Color theme
 set background=dark
 colorscheme solarized
