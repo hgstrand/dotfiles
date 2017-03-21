@@ -1,6 +1,9 @@
 "Make Vim more useful, uses Vim settings rather than Vi settings. Must be first
 set nocompatible
 
+" Set leader key
+let mapleader=" "
+
 " Set relative number with line number on focus line
 setl rnu
 set nu
@@ -74,6 +77,9 @@ set wildmenu
 map <C-J> :bnext<CR>
 map <C-K> :bprev<CR>
 
+" open buffer list wit leader-b
+nnoremap <Leader>b :ls<CR>:b<Space>
+
 " Setting Color theme
 set background=dark
 colorscheme solarized
@@ -95,8 +101,6 @@ set go-=r
 set guifont=Monaco:h12
 "
 
-" Set leader key
-let mapleader=" "
 
 " Save and quit with leader + d
 map <Leader>d :wq<cr>
