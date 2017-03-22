@@ -1,6 +1,9 @@
 "Make Vim more useful, uses Vim settings rather than Vi settings. Must be first
 set nocompatible
 
+" Set leader key
+let mapleader=" "
+
 " Set relative number with line number on focus line
 setl rnu
 set nu
@@ -60,11 +63,22 @@ set softtabstop=4
 set shiftwidth=4
 filetype indent on
 
-" set tab properties for html files
+" set tab properties for html and js files
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+
+" javascript plugin
+let g:javascript_plugin_jsdoc = 1
 
 " Options in command line tab-completion
 set wildmenu
+
+" move among buffers with CTRL
+map <C-J> :bnext<CR>
+map <C-K> :bprev<CR>
+
+" open buffer list wit leader-b
+nnoremap <Leader>b :ls<CR>:b<Space>
 
 " Setting Color theme
 set background=dark
@@ -87,8 +101,6 @@ set go-=r
 set guifont=Monaco:h12
 "
 
-" Set leader key
-let mapleader=" "
 
 " Save and quit with leader + d
 map <Leader>d :wq<cr>
