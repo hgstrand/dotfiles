@@ -4,6 +4,33 @@ set nocompatible
 " Set leader key
 let mapleader=" "
 
+" Setting Color theme
+set background=dark
+colorscheme solarized
+
+" Set OS spesific options
+if has("win32")
+    " Set font in gui Vim
+    set guifont=Consolas:h12
+    " swap and undo dirs
+    set backupdir=$HOME\vimfiles\backups
+    set directory=$HOME\vimfiles\swaps
+    if exists("&undodir")
+        set undodir=$HOME\vimfiles\ndo
+    endif
+else 
+    if has ("unix")
+        set guifont=Monaco:h12
+
+        " Centralize backups, swapfiles and undo history
+        set backupdir=~/.vim/backups
+        set directory=~/.vim/swaps
+        if exists("&undodir")
+            set undodir=~/.vim/undo
+        endif
+    endif
+endif
+
 " Set relative number with line number on focus line
 setl rnu
 set nu
@@ -36,12 +63,6 @@ syntax enable
 
 filetype indent plugin on
 
-" Centralize backups, swapfiles and undo history
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
-if exists("&undodir")
-	set undodir=~/.vim/undo
-endif
 
 " Highlight searches
 set hlsearch
@@ -80,9 +101,6 @@ map <C-K> :bprev<CR>
 " open buffer list wit leader-b
 nnoremap <Leader>b :ls<CR>:b<Space>
 
-" Setting Color theme
-set background=dark
-colorscheme solarized
 
 " Setting status line (with air-line)
 set laststatus=2
@@ -94,12 +112,9 @@ inoremap <C-x>c <esc>bgUWea
 " Clear search highlighting with space key
 nnoremap <Space> :noh<cr>
 
-" Removes scroolbar on gui Vim
-set go-=r
-
-" Set font in gui Vim
-set guifont=Monaco:h12
-"
+" GUI Options 
+set go-=r "remove scrollbar
+set guioptions-=T  "remove toolbar
 
 
 " Save and quit with leader + d
