@@ -122,3 +122,6 @@ map <Leader>d :wq<cr>
 
 " Save with leader + s
 map <Leader>s :w<cr>
+
+" Scroll with mouse
+set mouse=a
