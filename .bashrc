@@ -1,4 +1,3 @@
-
 ### Aliases goes here ###
 alias hera='ssh hera'
 alias stue='ssh stue'

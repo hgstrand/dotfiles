@@ -4,6 +4,12 @@ set nocompatible
 " Set leader key
 let mapleader=" "
 
+execute pathogen#infect()
+" Enable syntax highlighting indentig
+syntax enable
+filetype indent plugin on
+
+
 " Setting Color theme
 set background=dark
 colorscheme solarized
@@ -57,11 +63,6 @@ set autoread
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
 set hidden
-
-" Enable syntax highlighting
-syntax enable
-
-filetype indent plugin on
 
 
 " Highlight searches
