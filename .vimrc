@@ -13,10 +13,14 @@ if has("win32")
     " Set font in gui Vim
     set guifont=Consolas:h12
     " swap and undo dirs
+    if has("gui")
+        colorscheme pencil
+        set background=light
+    endif
     set backupdir=$HOME\vimfiles\backups
     set directory=$HOME\vimfiles\swaps
     if exists("&undodir")
-        set undodir=$HOME\vimfiles\ndo
+        set undodir=$HOME\vimfiles\undo
     endif
 else 
     if has ("unix")
@@ -122,3 +126,7 @@ map <Leader>d :wq<cr>
 
 " Save with leader + s
 map <Leader>s :w<cr>
+
+set wrap
+set linebreak
+set nolist
