@@ -22,6 +22,7 @@ if has("win32")
     if has("gui")
         colorscheme pencil
         set background=light
+        set lines=200 columns=110
     endif
     set backupdir=$HOME\vimfiles\backups
     set directory=$HOME\vimfiles\swaps
