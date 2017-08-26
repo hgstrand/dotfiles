@@ -22,6 +22,7 @@ if has("win32")
     if has("gui")
         colorscheme pencil
         set background=light
+        set lines=50 columns=110
     endif
     set backupdir=$HOME\vimfiles\backups
     set directory=$HOME\vimfiles\swaps
@@ -112,8 +113,8 @@ set wildmenu
 map <C-J> :bnext<CR>
 map <C-K> :bprev<CR>
 
-" open buffer list wit leader-b
-nnoremap <Leader>b :ls<CR>:b<Space>
+" open buffer list with leader-l
+nnoremap <Leader>l :ls<CR>:b<Space>
 
 
 " Setting status line (with air-line)
