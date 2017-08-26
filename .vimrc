@@ -88,7 +88,7 @@ set smartcase
 " Highlight dynamically as pattern is typed
 set incsearch
 
-" Start scrolling three lines before the horizontal window border
+" Start scrolling three lines before the horizontal window border 
 set scrolloff=3
 
 " Setting tab properties
@@ -141,5 +141,16 @@ set wrap
 set linebreak
 set nolist
 
+
 " Scroll with mouse
 set mouse=a
+
+" Python spesific setup
+let g:syntastic_check_on_open = 1
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_wq = 0
