@@ -1,6 +1,8 @@
 "Make Vim more useful, uses Vim settings rather than Vi settings. Must be first
 set nocompatible
 
+set encoding=utf-8
+
 " Set leader key
 let mapleader=" "
 
@@ -18,12 +20,12 @@ colorscheme solarized
 if has("win32")
     " Set font in gui Vim
     set guifont=Consolas:h12
-    " swap and undo dirs
     if has("gui")
         colorscheme pencil
         set background=light
         set lines=50 columns=110
     endif
+    " swap and undo dirs
     set backupdir=$HOME\vimfiles\backups
     set directory=$HOME\vimfiles\swaps
     if exists("&undodir")
