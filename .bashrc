@@ -1,8 +1,7 @@
 ### Aliases goes here ###
-alias hera='ssh hera'
-alias stue='ssh stue'
 alias bc='brew cask'
 alias bcs='brew cask search'
+
 # Gets external ip
 alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
