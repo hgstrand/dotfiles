@@ -5,7 +5,7 @@ export PS1="\W \$ "
 source ~/.bashrc
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
-export PATH=/Users/henrik/Library/Android/sdk/platform-tools:$PATH
+## export PATH=/Users/henrik/Library/Android/sdk/platform-tools:$PATH
 
 # Add tab completion for many Bash commands
 if which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
