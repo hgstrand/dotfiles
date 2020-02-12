@@ -1,6 +1,6 @@
 ### Aliases goes here ###
 alias bc='brew cask'
-alias bcs='brew cask search'
+alias bs='brew search'
 
 # Gets external ip
 alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
