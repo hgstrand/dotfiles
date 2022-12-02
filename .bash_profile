@@ -1,11 +1,13 @@
 
 #Change the prompt
-export PS1="\W \$ "
+export PS1="\W\$ "
 
 source ~/.bashrc
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
 ## export PATH=/Users/henrik/Library/Android/sdk/platform-tools:$PATH
+# Add poetry to path
+export PATH=/Users/henrik/.local/bin:$PATH
 
 # Add tab completion for many Bash commands
 if which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
@@ -28,3 +30,4 @@ export LSCOLORS=exfxcxdxbxegedabagacad
 
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+export HOMEBREW_GITHUB_API_TOKEN=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

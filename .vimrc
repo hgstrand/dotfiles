@@ -13,8 +13,10 @@ filetype indent plugin on
 
 
 " Setting Color theme
-set background=dark
-colorscheme solarized
+if has("gui")
+    set background=dark
+    colorscheme solarized
+endif
 
 " Set OS spesific options
 if has("win32")
