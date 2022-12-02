@@ -30,4 +30,3 @@ export LSCOLORS=exfxcxdxbxegedabagacad
 
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-export HOMEBREW_GITHUB_API_TOKEN=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
