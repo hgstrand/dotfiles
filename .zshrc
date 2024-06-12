@@ -1,3 +1,5 @@
+PROMPT="%n %2~ %# "
+
 ### Aliases goes here ###
 alias bc='brew cask'
 alias bs='brew search'
@@ -13,9 +15,3 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && kil
 # Show/hide icons on desktop
 alias desktophide="defaults write com.apple.finder CreateDesktop false && killall Finder"
 alias desktopshow="defaults write com.apple.finder CreateDesktop true && killall Finder"
-### ###
-
-
-# Remove duplicates in bash hisory
-export HISTCONTROL=ignoreboth:erasedups
-
