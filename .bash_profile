@@ -24,9 +24,5 @@ fi;
 export CLICOLOR=1
 export LSCOLORS=exfxcxdxbxegedabagacad
 
-# Adding qfc autocomplete
-[[ -s "$HOME/.qfc/bin/qfc.sh" ]] && source "$HOME/.qfc/bin/qfc.sh"
-
-
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
