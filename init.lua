@@ -3,6 +3,7 @@ vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
+vim.opt.clipboard:append { 'unnamed', 'unnamedplus' }
 
 -- Set leader key to space
 vim.g.mapleader = " "
@@ -54,7 +55,6 @@ require("catppuccin").setup()
 
 -- Setup telescope to show hidden files (dotfiles)
 require("telescope").setup({pickers={find_files={hidden=true}}})
-
 
 require("oil").setup()
 
