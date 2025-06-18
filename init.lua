@@ -5,6 +5,9 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.opt.clipboard:append { 'unnamed', 'unnamedplus' }
 
+-- Change follow tags shortcut to CTRL-å
+vim.keymap.set('n', '<C-å>', '<C-]>')
+
 -- Set leader key to space
 vim.g.mapleader = " "
 
