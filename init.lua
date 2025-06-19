@@ -42,8 +42,9 @@ local plugins = {
       -- Optional dependencies
       dependencies = { { "echasnovski/mini.icons", opts = {} } },
       -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
-}
-}
+      },
+    { "nvim-treesitter/nvim-treesitter", branch = 'main', lazy = false, build = ":TSUpdate"}
+  }
 
 local opts = {}
 
@@ -63,4 +64,9 @@ require("oil").setup()
 
 vim.cmd.colorscheme "catppuccin"
 
+
+vim.cmd("set wrap")
+vim.cmd("set linebreak") -- # (optional - breaks by word rather than character)
+vim.api.nvim_set_keymap("n", "k", "v:count == 0 ? 'gk' : 'k'", { noremap = true, expr = true, silent = true })
+vim.api.nvim_set_keymap("n", "j", "v:count == 0 ? 'gj' : 'j'", { noremap = true, expr = true, silent = true })
 
