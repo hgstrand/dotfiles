@@ -50,7 +50,8 @@ local plugins = {
         dependencies = {
           "nvim-tree/nvim-web-devicons",
       },
-    }
+      },
+    { "nvim-treesitter/nvim-treesitter", branch = 'main', lazy = false, build = ":TSUpdate"}
   }
 
 local opts = {}
@@ -94,4 +95,9 @@ vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 vim.cmd.colorscheme "catppuccin"
 
+
+vim.cmd("set wrap")
+vim.cmd("set linebreak") -- # (optional - breaks by word rather than character)
+vim.api.nvim_set_keymap("n", "k", "v:count == 0 ? 'gk' : 'k'", { noremap = true, expr = true, silent = true })
+vim.api.nvim_set_keymap("n", "j", "v:count == 0 ? 'gj' : 'j'", { noremap = true, expr = true, silent = true })
 
